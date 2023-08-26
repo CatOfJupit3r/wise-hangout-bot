@@ -1,0 +1,32 @@
+{
+    "evening": {
+        "date": "26/08/2023 20:12:26",
+        "items": [
+            {
+                "name": "coffee",
+                "price_for_one": 10,
+                "quantity": 1,
+                "customer": "Bohdan",
+                "purchase_date": "26/08/2023 20:12:26"
+            },
+            {
+                "name": "pizza",
+                "price_for_one": 145,
+                "quantity": 1,
+                "customer": "John",
+                "purchase_date": "26/08/2023 20:12:26"
+            },
+            {
+                "name": "burger",
+                "price_for_one": 50,
+                "quantity": 1,
+                "customer": "John",
+                "purchase_date": "26/08/2023 20:12:26"
+            }
+        ],
+        "users": [
+            "Bohdan",
+            "John"
+        ]
+    }
+}

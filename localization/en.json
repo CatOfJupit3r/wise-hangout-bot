@@ -1,0 +1,12 @@
+{
+    "invalid_input": "Invalid input, please try again",
+    "welcome_message": "Welcome to the WiseHangout Bot!",
+    "main_menu": "Main menu",
+    "view_debts": "View your current debts",
+    "create_receipt": "Create a new receipt",
+    "view_receipt": "View a receipt",
+    "choose_language": "Оберіть мову",
+    "choose_option": "Please choose an option on screen",
+    "enter_receipt_id": "Enter receipt ID",
+    "receipt_not_found": "Receipt not found"
+}

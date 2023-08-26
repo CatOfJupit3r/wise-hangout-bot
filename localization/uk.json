@@ -1,0 +1,12 @@
+{
+    "invalid_input": "Невірний ввід",
+    "welcome_message": "Вітаю у WiseHangout бота!",
+    "main_menu": "Головне меню",
+    "view_debts": "Переглянути борги",
+    "create_receipt": "Створити квитанцію",
+    "view_receipt": "Переглянути квитанцію",
+    "choose_language": "Оберіть мову",
+    "choose_option": "Оберіть дію серед наведених",
+    "enter_receipt_id": "Введіть ID квитанції",
+    "receipt_not_found": "Квитанцію не знайдено"
+}
