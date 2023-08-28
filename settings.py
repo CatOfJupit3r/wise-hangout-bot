@@ -89,3 +89,14 @@ dictConfig(LOGGING_CONFIG)
 logger_errors = logging.getLogger("errors")
 logger_game = logging.getLogger("general")
 logger_info = logging.getLogger("bot")
+
+# FUNCTIONS
+
+
+def generate_id() -> str:
+    """
+    Generates random id
+    :return: str
+    """
+    import uuid
+    return str(uuid.uuid4())

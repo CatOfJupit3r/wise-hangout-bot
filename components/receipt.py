@@ -18,7 +18,7 @@ def load_receipt(name) -> "Receipt":
     with open("database/receipts.json", "r+") as f:
         receipts = json.load(f)
     receipt = receipts[name]
-    receipt_object = Receipt(name)
+    receipt_object = Receipt(name, push_to_database=False)
     receipt_object.date = receipt["date"]
     receipt_object._users = receipt["users"]
     for item in receipt["items"]:
@@ -33,17 +33,19 @@ class Receipt:
     This class represents a receipt
     """
 
-    def __init__(self, name):
+    def __init__(self, name: str, *, push_to_database=True):
         """
         Constructor for Receipt class
         :param name: str
         """
+        self.id = settings.generate_id()
         self.name = name
         self.date = time.strftime("%d/%m/%Y %H:%M:%S")
         self._items: list[purchase.Purchase] = []
         self.total: int = 0
         self._users = []
-        self.__save_to_database()
+        if push_to_database:
+            self.__save_to_database()
 
     def __save_to_database(self):
         """
@@ -63,7 +65,8 @@ class Receipt:
                 "customer": item.customer,
                 "purchase_date": item.purchase_date,
             })
-        receipts[self.name] = {
+        receipts[self.id] = {
+            "name": self.name,
             "date": self.date,
             "items": items_to_save,
             "users": self.users
@@ -106,3 +109,10 @@ class Receipt:
         for user in debt:
             debt[user] = divided_total - debt[user]
         return debt
+
+    def get_receipt_info(self):
+        """
+        Returns receipt info
+        :return: str
+        """
+        return f"{self.name}\n{self.date}\n{self.total}\n"

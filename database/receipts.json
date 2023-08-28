@@ -1,32 +1,49 @@
 {
-    "evening": {
-        "date": "26/08/2023 20:12:26",
-        "items": [
-            {
-                "name": "coffee",
-                "price_for_one": 10,
-                "quantity": 1,
-                "customer": "Bohdan",
-                "purchase_date": "26/08/2023 20:12:26"
-            },
-            {
-                "name": "pizza",
-                "price_for_one": 145,
-                "quantity": 1,
-                "customer": "John",
-                "purchase_date": "26/08/2023 20:12:26"
-            },
-            {
-                "name": "burger",
-                "price_for_one": 50,
-                "quantity": 1,
-                "customer": "John",
-                "purchase_date": "26/08/2023 20:12:26"
-            }
-        ],
-        "users": [
-            "Bohdan",
-            "John"
-        ]
+    "Dooasda": {
+        "date": "27/08/2023 13:25:48",
+        "items": [],
+        "users": []
+    },
+    "033b5f12-42b6-4dfc-b2be-504fc4c41f15": {
+        "name": "asd",
+        "date": "27/08/2023 20:42:44",
+        "items": [],
+        "users": []
+    },
+    "4319774e-4ba5-4db5-82bd-015dd9eded5e": {
+        "name": "asdads",
+        "date": "27/08/2023 20:53:02",
+        "items": [],
+        "users": []
+    },
+    "1995b2ac-158b-481f-8611-234018b25e40": {
+        "name": "asdasd",
+        "date": "27/08/2023 20:58:41",
+        "items": [],
+        "users": []
+    },
+    "39e34d3b-0af1-4261-b6ee-597f15963baf": {
+        "name": "dsadasd",
+        "date": "27/08/2023 21:02:04",
+        "items": [],
+        "users": []
+    },
+    "b9d265b2-c127-4dbf-a574-468e0e884d4a": {
+        "name": "adsasd",
+        "date": "29/08/2023 00:39:27",
+        "items": [],
+        "users": []
+    },
+    "93942501-c08b-49be-805f-53c06ee7185b": {
+        "name": "b9d265b2-c127-4dbf-a574-468e0e884d4a",
+        "date": "29/08/2023 00:40:58",
+        "items": [],
+        "users": []
+    },
+    "92d8fd40-88dc-458e-a148-79a2b9a58f4b": {
+        "name": "b9d265b2-c127-4dbf-a574-468e0e884d4a",
+        "date": "29/08/2023 00:42:14",
+        "items": [],
+        "users": []
     }
 }
