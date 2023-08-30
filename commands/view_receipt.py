@@ -20,9 +20,17 @@ def view_receipt_with_id(message, bot):
         receipt_object = receipt.load_receipt(receipt_id)
         if receipt_object is not None:
             if user_id == settings.OWNER_ID or user_id in receipt_object.users:
-                bot.send_message(user_id, receipt_object.get_receipt_info())
+                result = ""
+                result += str(receipt_object.get_receipt_info(user_id) + "\n")
+                result += localize(user_id, "items") + "\n"
                 for item in receipt_object.items:
-                    bot.send_message(user_id, item.get_item_info())
+                    result += str(item.get_item_info(user_id) + "\n")
+                debts = receipt_object.users
+                if debts is not None:
+                    result += localize(user_id, "payed") + "\n"
+                    for debt in debts:
+                        result += str(users[debt]["nickname"] + " — " + str(abs(debts[debt])) + "\n")
+                bot.send_message(user_id, result)
             else:
                 bot.send_message(user_id, localize(user_id, "user_not_in_receipt"))
         else:
@@ -30,4 +38,3 @@ def view_receipt_with_id(message, bot):
     else:
         bot.send_message(user_id, localize(user_id, "receipt_not_found"))
     general.main_menu(message, bot)
-    return

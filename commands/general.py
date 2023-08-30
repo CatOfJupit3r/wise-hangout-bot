@@ -7,7 +7,7 @@ from localization.localization import localize
 def update_current_receipt_id(user_id: str, receipt_id: str):
     with open("database/users.json", "r+") as f:
         users = json.load(f)
-        users[str(user_id)]["current_receipt"] = receipt_id
+    users[str(user_id)]["current_receipt"] = receipt_id
     with open("database/users.json", "w+") as f:
         json.dump(users, f, indent=4)
 
@@ -42,7 +42,7 @@ def choosing_language(message, bot: telebot.TeleBot):
     btn1 = telebot.types.InlineKeyboardButton(text="🇬🇧 English", callback_data="en")
     btn2 = telebot.types.InlineKeyboardButton(text="🇺🇦 Державна", callback_data="uk")
     markup.add(btn1, btn2)
-    bot.send_message(message.chat.id, "Choose language:", reply_markup=markup)
+    bot.send_message(message.chat.id, "Choose language/Оберіть мову:", reply_markup=markup)
 
 
 def choose_nickname(message, bot: telebot.TeleBot):
@@ -58,24 +58,24 @@ def _set_nickname(message, bot: telebot.TeleBot):
     main_menu(message, bot)
 
 
-def check_for_receipt_id(message, bot: telebot.TeleBot, callback_function, *args):
+def check_for_receipt_id(message, bot: telebot.TeleBot, callback_function):
     user_id = str(message.chat.id)
     with open("database/users.json", "r+") as f:
         users = json.load(f)
     if users[user_id]["current_receipt"] is not None:
-        yes_or_no_choice(message, bot, callback_function, *args)
+        yes_or_no_choice(message, bot, callback_function)
     else:
-        send_message_and_wait(bot, message, localize(message.chat.id, "enter_receipt_id"), callback_function, *args)
+        send_message_and_wait(bot, message, localize(message.chat.id, "enter_receipt_id"), callback_function)
 
 
-def yes_or_no_choice(message, bot, callback_function, *args):
+def yes_or_no_choice(message, bot, callback_function):
     btn1 = telebot.types.InlineKeyboardButton(
         text=localize(message.chat.id, "yes"),
-        callback_data=json.dumps(("yes", callback_function.__name__, args))
+        callback_data=json.dumps(("yes", callback_function.__name__))
     )
     btn2 = telebot.types.InlineKeyboardButton(
         text=localize(message.chat.id, "no"),
-        callback_data=json.dumps(("no", callback_function.__name__, args))
+        callback_data=json.dumps(("no", callback_function.__name__))
     )
     markup = telebot.types.InlineKeyboardMarkup()
     bot.send_message(message.chat.id, localize(message.chat.id, "use_last_receipt"), reply_markup=markup.add(btn1, btn2))
@@ -89,12 +89,12 @@ def find_callback_function(callback_function_name):
     raise AttributeError(f"Callback function {callback_function_name} not found")
 
 
-def yes_option(message, bot, callback_function, *args):
-    try:
-        callback_function(message, bot, *args)
-    except TypeError:
-        callback_function(message, bot)
+def yes_option(message, bot, callback_function):
+    with open("database/users.json", "r+") as f:
+        users = json.load(f)
+    message.text = str(users[str(message.chat.id)]["current_receipt"])
+    callback_function(message, bot)
 
 
-def no_option(message, bot, callback_function, *args):
-    send_message_and_wait(bot, message, localize(message.chat.id, "enter_receipt_id"), callback_function, *args)
+def no_option(message, bot, callback_function):
+    send_message_and_wait(bot, message, localize(message.chat.id, "enter_receipt_id"), callback_function)

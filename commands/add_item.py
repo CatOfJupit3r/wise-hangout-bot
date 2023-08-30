@@ -29,18 +29,24 @@ def _set_item_name(message, bot, receipt_id: str):
     general.send_message_and_wait(bot, message, localize(message.chat.id, "enter_item_price"), _set_item_price, receipt_id, message.text)
 
 
-def _set_item_price(message, receipt_id: str, bot, item_name: str):
-    general.send_message_and_wait(bot, message, localize(message.chat.id, "enter_item_quantity"), _set_item_quantity, receipt_id, item_name, message.text)
+def _set_item_price(message, bot, receipt_id: str, item_name: str):
+    try:
+        float(message.text)
+        general.send_message_and_wait(bot, message, localize(message.chat.id, "enter_item_quantity"), _create_purchase, receipt_id, item_name, message.text)
+    except ValueError:
+        bot.send_message(message.chat.id, localize(message.chat.id, "price_not_number"))
+        general.main_menu(message, bot)
 
 
-def _set_item_quantity(message, receipt_id: str, bot, item_name: str, item_price: str):
-    general.send_message_and_wait(bot, message, localize(message.chat.id, "enter_item_customer"), _create_purchase, receipt_id, item_name, item_price, message.text)
-
-
-def _create_purchase(message, receipt_id: str, bot, item_name: str, item_price: str):
-    new_item = purchase.Purchase(item_name, float(item_price), int(message.text))
-    receipt_object = receipt.load_receipt(receipt_id)
-    receipt_object.add_item(new_item)
-    bot.send_message(message.chat.id, localize(message.chat.id, "item_added"))
-    general.main_menu(message, bot)
+def _create_purchase(message, bot, receipt_id: str, item_name: str, item_price: str):
+    try:
+        int(message.text)
+        new_item = purchase.Purchase(item_name, float(item_price), int(message.text))
+        receipt_object = receipt.load_receipt(receipt_id)
+        receipt_object.add_item(new_item)
+        bot.send_message(message.chat.id, localize(message.chat.id, "item_added"))
+        general.main_menu(message, bot)
+    except ValueError:
+        bot.send_message(message.chat.id, localize(message.chat.id, "quantity_not_number"))
+        general.main_menu(message, bot)
 

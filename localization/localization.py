@@ -29,8 +29,8 @@ def get_user_language(user_id: int | str) -> str:
     if isinstance(user_id, int):
         user_id = str(user_id)
     with open("database/users.json", "r+") as f:
-        localization = json.load(f)
-    return localization[user_id]["language"]
+        users = json.load(f)
+    return users[user_id]["language"]
 
 
 def localize(user_id: int | str, text: str) -> str:

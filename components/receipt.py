@@ -2,6 +2,7 @@ import components.purchase as purchase
 import time
 import json
 import settings
+from localization.localization import localize
 
 """
 This module contains class Receipt
@@ -9,7 +10,7 @@ Receipt represents a go to a restaurant or a cafe
 """
 
 
-def load_receipt(name) -> "Receipt":
+def load_receipt(name) -> "Receipt | None":
     """
     Loads receipt from json file
     :param name: str
@@ -17,8 +18,11 @@ def load_receipt(name) -> "Receipt":
     """
     with open("database/receipts.json", "r+") as f:
         receipts = json.load(f)
+    if name not in receipts:
+        return None
     receipt = receipts[name]
-    receipt_object = Receipt(name, push_to_database=False)
+    receipt_object = Receipt(receipt["name"], push_to_database=False)
+    receipt_object.id = name
     receipt_object.date = receipt["date"]
     receipt_object._users = receipt["users"]
     for item in receipt["items"]:
@@ -41,7 +45,7 @@ class Receipt:
         self.name = name
         self.date = time.strftime("%d/%m/%Y %H:%M:%S")
         self._items: list[purchase.Purchase] = []
-        self.need_to_be_paid: int = 0
+        self.total: int = 0
         self._users = {} # {user_id: how much he paid}
         if push_to_database:
             self.__save_to_database()
@@ -64,7 +68,8 @@ class Receipt:
             "name": self.name,
             "date": self.date,
             "items": items_to_save,
-            "users": self.users
+            "users": self.users,
+            "total": self.total
         }
         with open("database/receipts.json", "w+") as f:
             json.dump(receipts, f, indent=4)
@@ -76,7 +81,7 @@ class Receipt:
         :return: None
         """
         self._items.append(item)
-        self.need_to_be_paid += item.price_for_one * item.quantity
+        self.total += item.price_for_one * item.quantity
         self.__save_to_database()
 
     @property
@@ -103,7 +108,7 @@ class Receipt:
         :param amount: int
         :return: None
         """
-        self._users[user_id] = amount
+        self._users[str(user_id)] += amount
         self.__save_to_database()
 
     def get_debt_info(self, user_id=None) -> int | dict[str, int]:
@@ -114,31 +119,35 @@ class Receipt:
         """
         how_many_users = len(self.users.keys())
         if user_id is None:
-            debt = self.need_to_be_paid / how_many_users
+            debt = self.total / how_many_users
             result = {}
             for user in self.users:
                 result[user] = debt - self.users[user]
         else:
-            result = self.need_to_be_paid / how_many_users - self.users[user_id]
+            result = self.total / how_many_users - self.users[user_id]
         return result
 
-    def find_whom_to_pay(self, user_id) -> int:
+    def find_whom_to_pay(self, user_id) -> str:
         """
         Returns id of user to pay
         :param user_id: int
         :return: int
         """
         debt_info = self.get_debt_info()
-        if user_id in debt_info:
-            return user_id
-        else:
-            for user in debt_info:
-                if debt_info[user] < 0:
-                    return user
+        whom_to_pay = ""
+        with open("database/users.json", "r+") as f:
+            users = json.load(f)
+        debt_info.pop(str(user_id))
+        for user in debt_info:
+            if debt_info[user] < 0:
+                whom_to_pay += str(users[user]["nickname"]) + " — " + str(abs(debt_info[user]))
+        return whom_to_pay
 
-    def get_receipt_info(self):
+    def get_receipt_info(self, user_id=settings.OWNER_ID) -> str:
         """
         Returns receipt info
         :return: str
         """
-        return f"{self.name}\n{self.date}\n{self.need_to_be_paid}\n"
+        return f"{localize(user_id, 'name_receipt')}: \"{self.name}\"\n" \
+                f"{localize(user_id, 'date_of_receipt')}: {self.date}\n" \
+                f"{localize(user_id, 'total')}: {self.total}\n"
