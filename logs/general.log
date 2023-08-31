@@ -1,0 +1,226 @@
+INFO       - 2023-08-31 16:15:34,269 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 16:15:37,043 - main            - User 334635746 chose English language
+INFO       - 2023-08-31 16:15:37,592 - general         - User 334635746 has been sent message Enter your nickname. Waiting for response...
+INFO       - 2023-08-31 16:15:41,793 - general         - User 334635746 set nickname Roman
+INFO       - 2023-08-31 16:30:24,858 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 16:30:28,707 - delete_my_data  - User 334635746 chose to delete his data
+INFO       - 2023-08-31 16:30:28,913 - general         - User 334635746 has been sent message you_sure. Waiting for response...
+INFO       - 2023-08-31 16:30:32,831 - delete_my_data  - User 334635746 removed from database
+INFO       - 2023-08-31 16:33:28,305 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 16:33:29,478 - main            - User 334635746 chose English language
+INFO       - 2023-08-31 16:33:29,690 - general         - User 334635746 has been sent message Enter your nickname. Waiting for response...
+INFO       - 2023-08-31 16:33:31,973 - general         - User 334635746 set nickname ROman
+INFO       - 2023-08-31 16:33:44,058 - create_receipt  - User 334635746 chose to create a new receipt
+INFO       - 2023-08-31 16:33:44,175 - general         - User 334635746 has been sent message Enter receipt name. Waiting for response...
+INFO       - 2023-08-31 16:33:49,939 - leave_receipt   - User 334635746 chose to leave a receipt
+INFO       - 2023-08-31 16:33:50,032 - general         - User 334635746 has been sent message Enter receipt ID. Waiting for response...
+INFO       - 2023-08-31 16:34:21,096 - leave_receipt   - User 334635746 removed from receipt 553a6cd7-e60e-46c9-bfd2-fa929f64261e
+INFO       - 2023-08-31 16:46:34,989 - join_receipt    - User 334635746 chose to join a receipt
+INFO       - 2023-08-31 16:46:35,172 - general         - User 334635746 has been sent message Enter receipt ID. Waiting for response...
+INFO       - 2023-08-31 16:46:36,468 - join_receipt    - User 334635746 added to receipt 553a6cd7-e60e-46c9-bfd2-fa929f64261e
+INFO       - 2023-08-31 16:46:51,586 - delete_my_data  - User 334635746 chose to delete his data
+INFO       - 2023-08-31 16:46:51,763 - general         - User 334635746 has been sent message Are you sure? (Yes/No). Waiting for response...
+INFO       - 2023-08-31 16:46:53,714 - delete_my_data  - User 334635746 removed from database
+INFO       - 2023-08-31 16:47:56,558 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 16:47:57,797 - main            - User 334635746 chose English language
+INFO       - 2023-08-31 16:47:58,034 - general         - User 334635746 has been sent message Enter your nickname. Waiting for response...
+INFO       - 2023-08-31 16:48:00,089 - general         - User 334635746 set nickname Roman
+INFO       - 2023-08-31 16:48:02,114 - delete_my_data  - User 334635746 chose to delete his data
+INFO       - 2023-08-31 16:48:02,222 - general         - User 334635746 has been sent message Are you sure? (Yes/No). Waiting for response...
+INFO       - 2023-08-31 16:48:03,883 - delete_my_data  - User 334635746 removed from database
+INFO       - 2023-08-31 16:49:32,063 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 16:49:33,440 - main            - User 334635746 chose English language
+INFO       - 2023-08-31 16:49:33,886 - general         - User 334635746 has been sent message Enter your nickname. Waiting for response...
+INFO       - 2023-08-31 16:49:34,768 - general         - User 334635746 set nickname Roman
+INFO       - 2023-08-31 16:49:36,134 - delete_my_data  - User 334635746 chose to delete his data
+INFO       - 2023-08-31 16:49:36,262 - general         - User 334635746 has been sent message Are you sure? (Yes/No). Waiting for response...
+INFO       - 2023-08-31 16:49:38,875 - delete_my_data  - User 334635746 removed from database
+INFO       - 2023-08-31 16:53:14,132 - create_receipt  - User 334635746 chose to create a new receipt
+INFO       - 2023-08-31 16:53:14,276 - general         - User 334635746 has been sent message Enter receipt name. Waiting for response...
+INFO       - 2023-08-31 16:53:26,125 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 16:53:27,639 - main            - User 334635746 chose English language
+INFO       - 2023-08-31 16:53:27,842 - general         - User 334635746 has been sent message Enter your nickname. Waiting for response...
+INFO       - 2023-08-31 16:53:29,887 - general         - User 334635746 set nickname Roman
+INFO       - 2023-08-31 16:53:31,253 - join_receipt    - User 334635746 chose to join a receipt
+INFO       - 2023-08-31 16:53:31,322 - general         - User 334635746 has been sent message Enter receipt ID. Waiting for response...
+INFO       - 2023-08-31 16:53:34,518 - join_receipt    - User 334635746 added to receipt 882b3f82-7002-44b9-b1d9-506083c410d0
+INFO       - 2023-08-31 16:53:36,682 - create_receipt  - User 334635746 chose to create a new receipt
+INFO       - 2023-08-31 16:53:36,747 - general         - User 334635746 has been sent message Enter receipt name. Waiting for response...
+INFO       - 2023-08-31 16:54:27,197 - add_payment     - User 334635746 chose to add a payment to a receipt
+INFO       - 2023-08-31 16:54:27,197 - general         - User 334635746 has current receipt 8d5a2a76-2544-4022-be71-435a32077f1c. Asking to use it...
+INFO       - 2023-08-31 16:54:28,112 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 16:54:28,374 - general         - User 334635746 has been sent message Enter payment amount. Waiting for response...
+INFO       - 2023-08-31 16:54:30,636 - add_payment     - User 334635746 entered payment amount 100 to receipt 8d5a2a76-2544-4022-be71-435a32077f1c
+INFO       - 2023-08-31 16:54:30,643 - add_payment     - User 334635746 added payment 100 to receipt 8d5a2a76-2544-4022-be71-435a32077f1c successfully!
+INFO       - 2023-08-31 16:54:34,713 - delete_my_data  - User 334635746 chose to delete his data
+INFO       - 2023-08-31 16:54:34,904 - general         - User 334635746 has been sent message Are you sure? (Yes/No). Waiting for response...
+INFO       - 2023-08-31 16:54:36,890 - delete_my_data  - User 334635746 removed from database
+INFO       - 2023-08-31 16:55:02,961 - delete_my_data  - User 334635746 chose to delete his data
+INFO       - 2023-08-31 16:55:03,133 - general         - User 334635746 has been sent message Are you sure? (Yes/No). Waiting for response...
+ERROR      - 2023-08-31 16:55:04,601 - delete_my_data  - User 334635746 not found in database
+INFO       - 2023-08-31 16:55:14,573 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 16:55:26,774 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 16:55:28,426 - main            - User 334635746 chose English language
+INFO       - 2023-08-31 16:55:28,622 - general         - User 334635746 has been sent message Enter your nickname. Waiting for response...
+INFO       - 2023-08-31 16:55:30,723 - general         - User 334635746 set nickname Roman
+INFO       - 2023-08-31 16:55:35,393 - delete_my_data  - User 334635746 chose to delete his data
+INFO       - 2023-08-31 16:55:35,457 - general         - User 334635746 has been sent message Are you sure? (Yes/No). Waiting for response...
+INFO       - 2023-08-31 16:55:37,252 - delete_my_data  - User 334635746 removed from database
+INFO       - 2023-08-31 17:00:19,273 - view_receipt    - User 334635746 chose to view a receipt
+INFO       - 2023-08-31 17:00:23,822 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 17:00:25,203 - main            - User 334635746 chose English language
+INFO       - 2023-08-31 17:00:25,587 - general         - User 334635746 has been sent message Enter your nickname. Waiting for response...
+INFO       - 2023-08-31 17:00:27,900 - general         - User 334635746 set nickname Roman
+INFO       - 2023-08-31 17:00:29,166 - view_receipt    - User 334635746 chose to view a receipt
+INFO       - 2023-08-31 17:00:29,166 - general         - User 334635746 has no current receipt. Asking to enter receipt id...
+INFO       - 2023-08-31 17:00:29,343 - general         - User 334635746 has been sent message Enter receipt ID. Waiting for response...
+ERROR      - 2023-08-31 17:00:36,439 - view_receipt    - Receipt Create a new receipt not found
+INFO       - 2023-08-31 17:00:39,289 - create_receipt  - User 334635746 chose to create a new receipt
+INFO       - 2023-08-31 17:00:39,473 - general         - User 334635746 has been sent message Enter receipt name. Waiting for response...
+INFO       - 2023-08-31 17:01:13,229 - view_receipt    - User 334635746 chose to view a receipt
+INFO       - 2023-08-31 17:01:13,229 - general         - User 334635746 has current receipt 055cf484-7982-4971-9d3e-72298891da15. Asking to use it...
+INFO       - 2023-08-31 17:01:14,111 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 17:01:14,188 - view_receipt    - User 334635746 viewed receipt 055cf484-7982-4971-9d3e-72298891da15 successfully!
+INFO       - 2023-08-31 17:02:29,392 - delete_my_data  - User 334635746 chose to delete his data
+INFO       - 2023-08-31 17:02:29,610 - general         - User 334635746 has been sent message Are you sure? (Yes/No). Waiting for response...
+INFO       - 2023-08-31 17:02:32,959 - add_payment     - User 334635746 chose to add a payment to a receipt
+INFO       - 2023-08-31 17:02:32,959 - general         - User 334635746 has current receipt 055cf484-7982-4971-9d3e-72298891da15. Asking to use it...
+INFO       - 2023-08-31 17:02:33,787 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 17:02:34,038 - general         - User 334635746 has been sent message Enter payment amount. Waiting for response...
+INFO       - 2023-08-31 17:02:35,481 - add_payment     - User 334635746 entered payment amount 1000 to receipt 055cf484-7982-4971-9d3e-72298891da15
+INFO       - 2023-08-31 17:02:35,483 - add_payment     - User 334635746 added payment 1000 to receipt 055cf484-7982-4971-9d3e-72298891da15 successfully!
+INFO       - 2023-08-31 17:02:36,929 - delete_my_data  - User 334635746 chose to delete his data
+INFO       - 2023-08-31 17:02:37,021 - general         - User 334635746 has been sent message Are you sure? (Yes/No). Waiting for response...
+INFO       - 2023-08-31 17:02:38,503 - delete_my_data  - User 334635746 removed from database
+INFO       - 2023-08-31 17:02:59,683 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 17:02:59,696 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 17:02:59,701 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 17:03:01,266 - main            - User 334635746 chose English language
+INFO       - 2023-08-31 17:03:01,509 - general         - User 334635746 has been sent message Enter your nickname. Waiting for response...
+INFO       - 2023-08-31 17:03:03,576 - general         - User 334635746 set nickname Roman
+INFO       - 2023-08-31 17:03:06,474 - join_receipt    - User 334635746 chose to join a receipt
+INFO       - 2023-08-31 17:03:06,557 - general         - User 334635746 has been sent message Enter receipt ID. Waiting for response...
+INFO       - 2023-08-31 17:03:10,543 - join_receipt    - User 334635746 added to receipt 055cf484-7982-4971-9d3e-72298891da15
+INFO       - 2023-08-31 17:03:23,982 - view_receipt    - User 334635746 chose to view a receipt
+INFO       - 2023-08-31 17:03:23,982 - general         - User 334635746 has current receipt 055cf484-7982-4971-9d3e-72298891da15. Asking to use it...
+INFO       - 2023-08-31 17:03:25,521 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 17:05:01,149 - view_receipt    - User 334635746 chose to view a receipt
+INFO       - 2023-08-31 17:05:01,150 - general         - User 334635746 has current receipt 055cf484-7982-4971-9d3e-72298891da15. Asking to use it...
+INFO       - 2023-08-31 17:05:01,996 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 17:05:44,831 - view_receipt    - User 334635746 chose to view a receipt
+INFO       - 2023-08-31 17:05:44,831 - general         - User 334635746 has current receipt 055cf484-7982-4971-9d3e-72298891da15. Asking to use it...
+INFO       - 2023-08-31 17:05:46,066 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 17:06:26,400 - view_receipt    - User 334635746 chose to view a receipt
+INFO       - 2023-08-31 17:06:26,400 - general         - User 334635746 has current receipt 055cf484-7982-4971-9d3e-72298891da15. Asking to use it...
+INFO       - 2023-08-31 17:06:27,508 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 17:06:56,867 - view_receipt    - User 334635746 chose to view a receipt
+INFO       - 2023-08-31 17:06:56,867 - general         - User 334635746 has current receipt 055cf484-7982-4971-9d3e-72298891da15. Asking to use it...
+INFO       - 2023-08-31 17:06:57,807 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 17:06:57,962 - view_receipt    - User 334635746 viewed receipt 055cf484-7982-4971-9d3e-72298891da15 successfully!
+INFO       - 2023-08-31 17:07:12,189 - view_receipt    - User 334635746 chose to view a receipt
+INFO       - 2023-08-31 17:07:12,189 - general         - User 334635746 has current receipt 055cf484-7982-4971-9d3e-72298891da15. Asking to use it...
+INFO       - 2023-08-31 17:07:13,446 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 17:07:13,524 - view_receipt    - User 334635746 viewed receipt 055cf484-7982-4971-9d3e-72298891da15 successfully!
+INFO       - 2023-08-31 17:13:19,973 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 17:13:22,062 - main            - User 334635746 chose English language
+INFO       - 2023-08-31 17:13:22,732 - general         - User 334635746 has been sent message Enter your nickname. Waiting for response...
+INFO       - 2023-08-31 17:13:25,148 - general         - User 334635746 set nickname Roman
+INFO       - 2023-08-31 17:16:55,585 - create_receipt  - User 334635746 chose to create a new receipt
+INFO       - 2023-08-31 17:16:55,827 - general         - User 334635746 has been sent message Enter receipt name. Waiting for response...
+INFO       - 2023-08-31 17:22:05,301 - main            - User 334635746 started the bot
+INFO       - 2023-08-31 17:22:07,271 - create_receipt  - User 334635746 chose to create a new receipt
+INFO       - 2023-08-31 17:22:07,401 - general         - User 334635746 has been sent message Enter receipt name. Waiting for response...
+INFO       - 2023-08-31 17:24:06,333 - create_receipt  - User 334635746 chose to create a new receipt
+INFO       - 2023-08-31 17:24:06,487 - general         - User 334635746 has been sent message Enter receipt name. Waiting for response...
+INFO       - 2023-08-31 17:24:15,086 - create_receipt  - User 334635746 chose to create a new receipt
+INFO       - 2023-08-31 17:24:15,158 - general         - User 334635746 has been sent message Enter receipt name. Waiting for response...
+INFO       - 2023-08-31 17:42:14,225 - view_receipt    - User 334635746 chose to view a receipt
+INFO       - 2023-08-31 17:42:14,226 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 17:46:39,193 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 17:46:39,193 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 17:46:40,172 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 17:46:40,535 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 17:47:26,608 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 17:47:26,609 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 17:47:28,149 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 17:47:28,314 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:00:49,281 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:00:49,281 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:00:50,118 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:00:50,452 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:15:08,432 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:15:08,432 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:15:09,685 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:15:10,020 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:16:14,610 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:16:14,610 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:16:15,975 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:16:16,183 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:16:39,184 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:16:39,184 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:16:40,896 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:16:41,121 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:17:05,481 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:17:05,481 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:17:06,967 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:17:07,158 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:18:37,494 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:18:37,494 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:18:39,176 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:18:39,364 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:19:24,893 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:19:24,893 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:19:26,046 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:19:26,274 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:19:36,374 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:19:36,374 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:19:37,463 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:19:37,656 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:20:44,400 - view_receipt    - User 334635746 chose to view a receipt
+INFO       - 2023-08-31 18:20:44,400 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:20:45,080 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:20:45,135 - view_receipt    - User 334635746 viewed receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:21:13,569 - add_item        - User 334635746 chose to add an item
+INFO       - 2023-08-31 18:21:13,569 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:21:14,672 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:21:14,971 - general         - User 334635746 has been sent message Enter item name. Waiting for response...
+INFO       - 2023-08-31 18:21:20,373 - add_item        - User 334635746 entered item name Pizza to receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb
+INFO       - 2023-08-31 18:21:20,487 - general         - User 334635746 has been sent message Enter item price. Waiting for response...
+INFO       - 2023-08-31 18:21:24,574 - add_item        - User 334635746 entered item price 1596 to receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb
+INFO       - 2023-08-31 18:21:24,653 - general         - User 334635746 has been sent message Enter item quantity. Waiting for response...
+INFO       - 2023-08-31 18:21:26,085 - add_item        - User 334635746 entered item quantity 1 to receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb
+INFO       - 2023-08-31 18:21:26,085 - add_item        - User 334635746 created purchase Purchase(name='Pizza', price_for_one=1596.0, quantity=1) to receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb
+INFO       - 2023-08-31 18:21:26,087 - add_item        - User 334635746 added purchase Purchase(name='Pizza', price_for_one=1596.0, quantity=1) to receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:21:28,358 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:21:28,358 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:21:29,198 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:21:29,355 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:21:39,849 - add_payment     - User 334635746 chose to add a payment to a receipt
+INFO       - 2023-08-31 18:21:39,849 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:22:04,959 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:22:05,116 - general         - User 334635746 has been sent message Enter payment amount. Waiting for response...
+INFO       - 2023-08-31 18:22:36,070 - add_payment     - User 334635746 entered payment amount 589 to receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb
+INFO       - 2023-08-31 18:22:36,077 - add_payment     - User 334635746 added payment 589 to receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:22:38,152 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:22:38,152 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:22:39,137 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:22:39,563 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:28:13,782 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:28:13,782 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:28:15,075 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:28:46,395 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:28:46,395 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:28:47,291 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:28:47,654 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:29:43,288 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:29:43,288 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:29:44,042 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:29:44,162 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:29:54,080 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:29:54,080 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:29:55,194 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:29:55,477 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!
+INFO       - 2023-08-31 18:30:04,844 - find_whom_to_pay - User 334635746 chose to find whom to pay
+INFO       - 2023-08-31 18:30:04,844 - general         - User 334635746 has current receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb. Asking to use it...
+INFO       - 2023-08-31 18:30:05,568 - main            - User 334635746 chose "Yes" option
+INFO       - 2023-08-31 18:30:05,814 - find_whom_to_pay - User 334635746 requested whom to pay in receipt 3aac988f-d5cf-40f2-a103-638d00df1eeb successfully!

@@ -92,15 +92,6 @@ class Receipt:
     def users(self):
         return self._users
 
-    def add_user(self, user_id):
-        """
-        Adds user to the receipt
-        :param user_id: int
-        :return: None
-        """
-        self._users[user_id] = 0
-        self.__save_to_database()
-
     def add_payment(self, user_id, amount):
         """
         Adds payment to the receipt
@@ -118,11 +109,17 @@ class Receipt:
         :return:
         """
         how_many_users = len(self.users.keys())
+        if "deleted_user" in self.users:
+            how_many_users -= 1
+            how_many_users += self._users["deleted_user"][1]
         if user_id is None:
             debt = self.total / how_many_users
             result = {}
             for user in self.users:
-                result[user] = debt - self.users[user]
+                if user == "deleted_user":
+                    result[user] = debt - self.users[user][0]
+                else:
+                    result[user] = debt - self.users[user]
         else:
             result = self.total / how_many_users - self.users[user_id]
         return result
@@ -138,9 +135,17 @@ class Receipt:
         with open("database/users.json", "r+") as f:
             users = json.load(f)
         debt_info.pop(str(user_id))
+        user_debt = self.get_debt_info(str(user_id))
+        if user_debt < 0:
+            return localize(user_id, "no_one")
         for user in debt_info:
-            if debt_info[user] < 0:
-                whom_to_pay += str(users[user]["nickname"]) + " — " + str(abs(debt_info[user]))
+            if debt_info[user] < 0 and user != "deleted_user":
+                if abs(user_debt) < abs(debt_info[user]):
+                    whom_to_pay += str(users[user]["nickname"]) + " — " + str(abs(user_debt)) + "\n"
+                else:
+                    whom_to_pay += str(users[user]["nickname"]) + " — " + str(abs(debt_info[user])) + "\n"
+            elif debt_info[user] < 0 and user == "deleted_user":
+                whom_to_pay += str(users[user]["nickname"]) + " — " + str(abs(debt_info[user])) + "\n"
         return whom_to_pay
 
     def get_receipt_info(self, user_id=settings.OWNER_ID) -> str:

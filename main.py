@@ -11,6 +11,7 @@ def run():
 
     @bot.message_handler(commands=["start"])
     def start(message):
+        settings.logger_general.info(f"User {message.chat.id} started the bot")
         with open("database/users.json", "r+") as f:
             users = json.load(f)
         user_id = str(message.chat.id)
@@ -42,9 +43,11 @@ def run():
             if action is not None:
                 match action:
                     case "yes":
+                        settings.logger_general.info(f"User {user_id} chose \"Yes\" option")
                         bot.delete_message(user_id, call.message.message_id)
                         commands.yes_option(call.message, bot, commands.find_callback_function(callback_function_name))
                     case "no":
+                        settings.logger_general.info(f"User {user_id} chose \"No\" option")
                         bot.delete_message(user_id, call.message.message_id)
                         commands.no_option(call.message, bot, commands.find_callback_function(callback_function_name))
                     case _:
@@ -52,11 +55,13 @@ def run():
             elif language is not None:
                 match call.data:
                     case "en":
+                        settings.logger_general.info(f"User {user_id} chose English language")
                         add_user_to_database(user_id, "en")
                         bot.send_message(user_id, localize(user_id, "welcome_message"))
                         bot.delete_message(user_id, call.message.message_id)
                         commands.choose_nickname(call.message, bot)
                     case "uk":
+                        settings.logger_general.info(f"User {user_id} chose Ukrainian language")
                         add_user_to_database(user_id, "uk")
                         bot.send_message(user_id, localize(user_id, "welcome_message"))
                         bot.delete_message(user_id, call.message.message_id)
@@ -81,12 +86,21 @@ def run():
             commands.add_payment(message, bot)
         elif message.text == localize(user_id, "find_whom_to_pay"):
             commands.find_whom_to_pay(message, bot)
+        elif message.text == localize(user_id, "leave_receipt"):
+            commands.leave_receipt(message, bot)
+        elif message.text == localize(user_id, "delete_my_data"):
+            commands.delete_user(message, bot)
         elif message.text == localize(user_id, "choose_language"):
+            settings.logger_general.info(f"User {message.chat.id} chose to change language")
             commands.choosing_language(message, bot)
         else:  # If user sends something else, then we just send him main menu
+            settings.logger_general.info(f"User {message.chat.id} sent unknown message: {message.text}")
             commands.main_menu(message, bot)
-
-    bot.polling(non_stop=True, interval=0, timeout=None)
+    while(True):
+        try:
+            bot.polling(none_stop=True)
+        except Exception as e:
+            continue
 
 
 if __name__ == "__main__":

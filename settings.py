@@ -31,23 +31,10 @@ LOGGING_CONFIG = {
             'class': 'logging.StreamHandler',
             'formatter': 'standard'
         },
-        'console2': {
-            'level': 'WARNING',
-            'class': 'logging.StreamHandler',
-            'formatter': 'standard'
-        },
-        'file': {
-            'level': 'INFO',
-            'class': 'logging.FileHandler',
-            'filename': 'logs/infos.log',
-            'mode': 'a',
-            'formatter': 'verbose',
-            'encoding': 'utf-8'
-        },
         'file_general': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': 'logs/game.log',
+            'filename': 'logs/general.log',
             'mode': 'a',
             'formatter': 'verbose',
             'encoding': 'utf-8'
@@ -62,11 +49,6 @@ LOGGING_CONFIG = {
         }
     },
     "loggers": {
-        "bot": {
-            "handlers": ["console", "file"],
-            "level": "INFO",
-            "propagate": False
-        },
         "general": {
             "handlers": ["file_general"],
             "level": "INFO",
@@ -87,8 +69,7 @@ dictConfig(LOGGING_CONFIG)
 # CREATE LOGGERS
 
 logger_errors = logging.getLogger("errors")
-logger_game = logging.getLogger("general")
-logger_info = logging.getLogger("bot")
+logger_general = logging.getLogger("general")
 
 # FUNCTIONS
 

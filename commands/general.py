@@ -2,6 +2,7 @@ import json
 
 import telebot
 from localization.localization import localize
+import settings
 
 
 def update_current_receipt_id(user_id: str, receipt_id: str):
@@ -14,18 +15,21 @@ def update_current_receipt_id(user_id: str, receipt_id: str):
 
 def send_message_and_wait(bot: telebot.TeleBot, message, text_to_send: str, next_step_handler: callable, *args):
     bot.send_message(message.chat.id, text_to_send)
+    settings.logger_general.info(f"User {message.chat.id} has been sent message {text_to_send}. Waiting for response...")
     bot.register_next_step_handler(message, next_step_handler, bot, *args)
 
 
 def main_menu(message, bot):
     button_labels = [
-        "create_receipt",
-        "view_debts",
-        "view_receipt",
-        "add_item",
         "join_receipt",
-        "add_payment",
         "find_whom_to_pay",
+        "view_receipt",
+        "create_receipt",
+        "add_item",
+        "add_payment",
+        "view_debts",
+        "leave_receipt",
+        "delete_my_data",
         "choose_language"
     ]
     keyboard_buttons = [
@@ -55,6 +59,7 @@ def _set_nickname(message, bot: telebot.TeleBot):
     users[str(message.chat.id)]["nickname"] = message.text
     with open("database/users.json", "w+") as f:
         json.dump(users, f, indent=4)
+    settings.logger_general.info(f"User {message.chat.id} set nickname {message.text}")
     main_menu(message, bot)
 
 
@@ -63,8 +68,10 @@ def check_for_receipt_id(message, bot: telebot.TeleBot, callback_function):
     with open("database/users.json", "r+") as f:
         users = json.load(f)
     if users[user_id]["current_receipt"] is not None:
+        settings.logger_general.info(f"User {user_id} has current receipt {users[user_id]['current_receipt']}. Asking to use it...")
         yes_or_no_choice(message, bot, callback_function)
     else:
+        settings.logger_general.info(f"User {user_id} has no current receipt. Asking to enter receipt id...")
         send_message_and_wait(bot, message, localize(message.chat.id, "enter_receipt_id"), callback_function)
 
 
@@ -82,7 +89,7 @@ def yes_or_no_choice(message, bot, callback_function):
 
 
 def find_callback_function(callback_function_name):
-    for module_name in ["view_receipt", "add_item", "add_payment", "find_whom_to_pay"]:
+    for module_name in ["view_receipt", "add_item", "add_payment", "find_whom_to_pay", "leave_receipt"]:
         module = __import__(f"commands.{module_name}", fromlist=[callback_function_name])
         if hasattr(module, callback_function_name):
             return getattr(module, callback_function_name)

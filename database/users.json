@@ -1,8 +1,27 @@
 {
+    "deleted_user": {
+        "current_receipt": null,
+        "language": "en",
+        "nickname": "Deleted User"
+    },
     "334635746": {
-        "receipts": {},
-        "current_receipt": "use_last_receipt",
+        "current_receipt": "3aac988f-d5cf-40f2-a103-638d00df1eeb",
+        "language": "en",
+        "nickname": "Roman"
+    },
+    "444212311": {
+        "current_receipt": "3aac988f-d5cf-40f2-a103-638d00df1eeb",
         "language": "uk",
-        "nickname": "Roma"
+        "nickname": "Vitalik"
+    },
+    "564212312": {
+        "current_receipt": "3aac988f-d5cf-40f2-a103-638d00df1eeb",
+        "language": "uk",
+        "nickname": "Nazar"
+    },
+    "564298783": {
+        "current_receipt": "3aac988f-d5cf-40f2-a103-638d00df1eeb",
+        "language": "uk",
+        "nickname": "Ihor"
     }
 }

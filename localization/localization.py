@@ -30,7 +30,11 @@ def get_user_language(user_id: int | str) -> str:
         user_id = str(user_id)
     with open("database/users.json", "r+") as f:
         users = json.load(f)
-    return users[user_id]["language"]
+    try:
+        return users[user_id]["language"]
+    except KeyError:
+        settings.logger_errors.error(f"User {user_id} not found in database")
+        return "en"
 
 
 def localize(user_id: int | str, text: str) -> str:

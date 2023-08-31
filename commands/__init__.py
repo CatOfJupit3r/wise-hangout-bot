@@ -6,3 +6,5 @@ from .add_payment import *
 from .view_debts import *
 from .view_receipt import *
 from .find_whom_to_pay import *
+from .leave_receipt import *
+from .delete_my_data import *
