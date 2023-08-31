@@ -138,6 +138,8 @@ class Receipt:
         user_debt = self.get_debt_info(str(user_id))
         if user_debt < 0:
             return localize(user_id, "no_one")
+        whom_to_pay += localize(user_id, "you_have_to_pay").format(user_debt) + "\n"
+        whom_to_pay += localize(user_id, "users_who_you_can_pay") + "\n"
         for user in debt_info:
             if debt_info[user] < 0 and user != "deleted_user":
                 if abs(user_debt) < abs(debt_info[user]):

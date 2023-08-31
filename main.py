@@ -98,6 +98,7 @@ def run():
             commands.main_menu(message, bot)
     while(True):
         try:
+            settings.logger_general.info("Initializing bot...")
             bot.polling(none_stop=True)
         except Exception as e:
             continue

@@ -9,7 +9,7 @@ fi
 pip install pyinstaller
 pip install -r requirements.txt
 
-pyinstaller --onefile main.py -n launch -i media/maneki_neko_icon.ico
+pyinstaller --onefile main.py -n launch -i media/icons/maneki_neko_icon.ico --distpath ./
 
 mv "./dist/launch" .
 

@@ -38,6 +38,8 @@
     "quantity": "Quantity",
     "payed": "Payed",
     "items": "Items",
+    "you_have_to_pay": "You have to pay {0} hryvnas",
+    "users_who_you_can_pay": "Users whom you can pay overpaid",
     "whom_to_pay": "Whom to pay",
     "user_not_in_receipt": "User is not in receipt!",
     "user_never_been_in_receipt": "User has never been in receipt!",
