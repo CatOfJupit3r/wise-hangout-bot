@@ -43,6 +43,7 @@ OWNER_ID="54324232"
   <img src="media/screenshots/use_last_receipt_id.png" alt="use_last_receipt_id" />
 </p>
 
+### Database files
 
 <p align="center">
   <img src="media/screenshots/receipt_database.png" alt="receipt_database" title="File containing all of receipts" />
