@@ -1,5 +1,5 @@
 # wise-hangout-bot
-Welcome to Wise Hangout Bot, your personal assistant for group hangout!
+Welcome to Wise Hangout Bot, your personal assistant for group hangouts!
 
 This is my personal project for my internship at UpLab.
 
